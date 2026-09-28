@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  
+    <!--iMPORTE UN TIPO DE LETA-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<title>Juegos</title>
+</head>
+<body id="Fondo" >
+
+<!--SECCION - CONTENEDOR GENERAL-------------------------------------------------------------->
+
+<section id="Seccion_suprema"  class="Contenedor_Supremo"> 
+
+
+
+
+<!--SECCION - 1 ------------------------------------------------------------------------------------------------------->
+
+<section class="Seccion_01" id="Seccion_01"  >
+<div class="Contenedor_RC" id="Contenedor_RC" onclick="Graficos_fondo()"><div class="Recursos" id="Recursos"></div></div>
+<h1 class="Nombre">IRON FIST</h1><h1 class="Texto_Principal">¿LISTO PARA DEFENDER<br> EL PLANETA?</h1>
+<button class="Boton" id="Juego" onclick="Mover()">JUGAR</button>
+</section>
+<!--SECCION - 3 ------------------------------------------------------------------------------------------------------->
+
+<section  id="Reglas">
+    <h1 class="Titulo_Reglas">Antes de empezar lee,<br><br> las reglas.</h1>
+    <!--094: Diagrama propio que explica cada regla con icono + descripcion, no solo flechas sueltas-->
+    <svg class="Img_reglas" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="892" height="412" rx="12" fill="#0a0528"/>
+        <rect x="4" y="4" width="892" height="412" rx="12" fill="none" stroke="#00e5ff" stroke-width="2"/>
+        <text x="450" y="42" text-anchor="middle" fill="#00e5ff" font-family="'Press Start 2P', cursive" font-size="18">REGLAS DEL JUEGO</text>
+
+        <!--===================== CARD 1: PUNTAJE ======================-->
+        <rect x="25" y="65" width="260" height="330" rx="12" fill="rgba(0,229,255,0.06)" stroke="#00e5ff" stroke-width="2"/>
+        <rect x="95" y="80" width="120" height="28" rx="14" fill="#00e5ff"/>
+        <text x="155" y="99" text-anchor="middle" fill="#03121a" font-family="'Press Start 2P', cursive" font-size="10">REGLA 1</text>
+
+        <!--icono: estrella de puntos + insignia +1-->
+        <polygon points="155.0,135.0 162.1,155.3 183.5,155.7 166.4,168.7 172.6,189.3 155.0,177.0 137.4,189.3 143.6,168.7 126.5,155.7 147.9,155.3" fill="#00e5ff"/>
+        <circle cx="197" cy="140" r="16" fill="#0a0528" stroke="#00e5ff" stroke-width="2"/>
+        <text x="197" y="145" text-anchor="middle" fill="#00e5ff" font-family="'Press Start 2P', cursive" font-size="11">+1</text>
+
+        <text x="155" y="235" text-anchor="middle" fill="#eafcff" font-family="'Press Start 2P', cursive" font-size="13">PUNTAJE</text>
+        <text x="155" y="265" text-anchor="middle" fill="#cfe9ff" font-family="'Inconsolata', monospace" font-size="15">
+            <tspan x="155" dy="0">Pasa el cursor sobre</tspan>
+            <tspan x="155" dy="22">un meteorito para</tspan>
+            <tspan x="155" dy="22">desviarlo y sumar 1</tspan>
+            <tspan x="155" dy="22">punto a tu marcador.</tspan>
+        </text>
+
+        <!--===================== CARD 2: TIEMPO ======================-->
+        <rect x="320" y="65" width="260" height="330" rx="12" fill="rgba(106,92,255,0.08)" stroke="#6a5cff" stroke-width="2"/>
+        <rect x="390" y="80" width="120" height="28" rx="14" fill="#6a5cff"/>
+        <text x="450" y="99" text-anchor="middle" fill="#f4f2ff" font-family="'Press Start 2P', cursive" font-size="10">REGLA 2</text>
+
+        <!--icono: reloj-->
+        <circle cx="450" cy="165" r="38" fill="#1a1a3d" stroke="#6a5cff" stroke-width="3"/>
+        <line x1="450" y1="133" x2="450" y2="127" stroke="#cfc8ff" stroke-width="2"/>
+        <line x1="482" y1="165" x2="488" y2="165" stroke="#cfc8ff" stroke-width="2"/>
+        <line x1="450" y1="197" x2="450" y2="203" stroke="#cfc8ff" stroke-width="2"/>
+        <line x1="418" y1="165" x2="412" y2="165" stroke="#cfc8ff" stroke-width="2"/>
+        <line x1="450" y1="165" x2="467.3" y2="155" stroke="#00e5ff" stroke-width="4" stroke-linecap="round"/>
+        <line x1="450" y1="165" x2="424" y2="150" stroke="#eafcff" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="450" cy="165" r="3.5" fill="white"/>
+
+        <text x="450" y="235" text-anchor="middle" fill="#eafcff" font-family="'Press Start 2P', cursive" font-size="13">TIEMPO</text>
+        <text x="450" y="265" text-anchor="middle" fill="#cfe9ff" font-family="'Inconsolata', monospace" font-size="15">
+            <tspan x="450" dy="0">Tienes 60 segundos</tspan>
+            <tspan x="450" dy="22">para llegar al puntaje</tspan>
+            <tspan x="450" dy="22">necesario. Si el reloj</tspan>
+            <tspan x="450" dy="22">llega a 0, pierdes.</tspan>
+        </text>
+
+        <!--===================== CARD 3: LIMITE (regla 3 y 4) ======================-->
+        <rect x="615" y="65" width="260" height="330" rx="12" fill="rgba(255,77,109,0.07)" stroke="#ff4d6d" stroke-width="2"/>
+        <rect x="675" y="80" width="140" height="28" rx="14" fill="#ff4d6d"/>
+        <text x="745" y="99" text-anchor="middle" fill="#2a0006" font-family="'Press Start 2P', cursive" font-size="10">REGLA 3 y 4</text>
+
+        <!--icono: meteorito acercandose al limite, planeta detras-->
+        <circle cx="655" cy="170" r="13" fill="#c68b3c"/>
+        <line x1="638" y1="180" x2="620" y2="192" stroke="#c68b3c" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+        <line x1="645" y1="185" x2="632" y2="200" stroke="#c68b3c" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+        <line x1="672" y1="168" x2="722" y2="168" stroke="#c68b3c" stroke-width="3" marker-end="url(#flecha)"/>
+        <line x1="745" y1="120" x2="745" y2="212" stroke="#ff4d6d" stroke-width="4" stroke-dasharray="9 6"/>
+        <circle cx="822" cy="170" r="24" fill="#2e56da" stroke="#8fd8ff" stroke-width="2"/>
+
+        <defs>
+            <marker id="flecha" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#c68b3c"/>
+            </marker>
+        </defs>
+
+        <text x="745" y="235" text-anchor="middle" fill="#eafcff" font-family="'Press Start 2P', cursive" font-size="13">LÍMITE</text>
+        <text x="745" y="265" text-anchor="middle" fill="#cfe9ff" font-family="'Inconsolata', monospace" font-size="15">
+            <tspan x="745" dy="0">Si un meteorito</tspan>
+            <tspan x="745" dy="22">cruza la línea roja</tspan>
+            <tspan x="745" dy="22">y llega al planeta,</tspan>
+            <tspan x="745" dy="22">es GAME OVER.</tspan>
+        </text>
+    </svg>
+    <div class="reglas-wrapper">
+  <div class="reglas-carousel">
+    <div class="regla-card active"><h3>REGLA : 1</h3><p>Tu objetivo principal es proteger la Tierra. Pasa rápidamente el cursor sobre cada meteorito que aparezca en pantalla para modificar su trayectoria 
+       <br> y evitar una colisión. Por cada meteorito que desvíes con éxito, recibirás 1 punto en tu marcador. (¡Suma 30 puntos para asegurar la victoria!)</br></p></div>
+    <div class="regla-card"><h3>REGLA : 2</h3><p>La defensa del planeta solo puede sostenerse durante 60 segundos. Debes alcanzar la meta de puntos requerida antes de que la cuenta regresiva llegue a cero.
+        <br> Si el tiempo se agota y no conseguiste los puntos necesarios, la misión habrá fallado.</br></p></div>
+    <div class="regla-card"><h3>REGLA : 3</h3><p>¡No te confíes! Los meteoritos atacarán de forma impredecible y a distintas velocidades. Está estrictamente prohibido dejar que crucen la línea roja de protección.
+        <br> Si un solo meteorito logra atravesar esa barrera y colisiona contra el planeta, la defensa colapsará y será GAME OVER automáticamente.</br></p></div>
+  </div>
+  <button class="flecha flecha-izq" id="prevRegla">‹</button>
+  <button class="flecha flecha-der" id="nextRegla">›</button>
+  <div class="indicadores"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+<div class="Listo" onclick="Mover_2()">¿Estás listo?</div>
+
+
+</section>
+
+
+
+<!--SECCION - 4 ------------------------------------------------------------------------------------------------------->
+
+<section id="Seccion_2">
+<h1 class="Titulo_historia" id="Titulo_historia">Todo empezó cuando...</h1>
+<div class="Contenedor_Historia" id="Mensaje"><h3 style="margin-top: -1%;">CAPÍTULO I: NUESTRA SALVACIÓN</h3>
+En cierto día, las noticias de todo el mundo anunciaron que muy pronto se acercarían meteoritos de gran
+tamaño a la tierra y que solo era cuestión de horas para que comenzaran a llegar; el resultado de esto fue inmediato ya que 
+miles de personas comenzaron a alertarse y a hacer disturbios, en centros comerciales y áreas públicas, para que el gobierno les
+diera alguna respuesta; pero el gobierno ya tenía un plan de contingencia, ya que ellos se habían enterado de la llegada de estos con días de antelación
+preparando con la ayuda del resto de gobiernos, la iniciativa "IRON FIST", que consistía en los proyectiles más letales de la tierra y nuestra única salvación
+<div class="BOTONES_2"><div class="Boton_preparado" onclick="Mover_3()">¿Estás preparado? </div><div class="Contenedor_narracion" id="Contenedor_narracion" title="Escuchar narración">
+<i class="fas fa-volume-up" id="VOLUMEN"></i><i class="fas fa-pause" id="PAUSE"></i></div></div>
+</div>
+<img src="IMG/Metioritos_Callendo.jpg" class="Imgane_metiorito" id="Imagen" >
+</section>
+
+<!--SECCION - 5 ------------------------------------------------------------------------------------------------------->
+
+        <!--SESCCION QUE CONTIENE TODOS LOS ELEMENTOS-->
+<section class="Seccion_Juego" id="Seccion_Juego">
+
+<div id="Splash_EsHora" class="Splash_EsHora">
+  <h1 class="Tituloar_Juego_5">¡ES HORA DE JUGAR!</h1>
+</div>
+
+<div id="WrapperJuego" style="display:none">
+  <div id="NIVEL_01">
+            <!--Contenedor-Cabezera-->
+            <div class="Cabezera ">
+            <div class="Tiempo"><h3>TIEMPO</h3><span id="Tiempo">70</span></div><!--Tiempo con su span para la el final del minuto--> 
+            <div class="Puntaje"><h3>PUNTAJE</h3><span id="Puntaje">0&nbsp;/&nbsp;15</span></div><!--Puntaje con su span que indica el puntaje-->
+            <div class="Pause" id="Pause"><h3>PAUSE / REANUDA</h3></div><!--Boton de pause-->
+        
+            </div>
+    
+            <!--CCMIENZO DEL JUEGO------------------------------------------------------>
+    
+            <!--Contenedor general del juego-->
+            <div class="Contenedor"> 
+            <!--EFECTOS DE SONIDO-->
+            <audio id="Perdiste_sound" src="Perdiste.mp3" preload="auto"></audio>
+            <audio id="Fondo_Ciberpunk" src="Ciberpunk.mp3" preload="auto" autoplay loop></audio>
+            <audio id="Puntos_sound" src="Puntos.mp3" preload="auto"></audio>
+            <audio id="Punto2" src="Punto2.mp3" preload="auto"></audio>
+            <audio id="Punto3" src="Punto3.mp3"preload="auto"></audio>
+            <audio id="Punto4" src="Punto4.mp3" preload="auto"></audio>
+            <audio id="narracion" src="Narracion.mp3" preload="auto"></audio>
+            <audio id="Triunfo" src="fanfare-triumphal.mp3" preload="auto"></audio>
+            <audio id="Ganaste" src="Mensaje_Ganaste.mp3" preload="auto"></audio>
+            <audio id="Musica_Final" src="Musica_Epica_Final.mp3" preload="auto"></audio>
+            <!--IMAGENES DEBTRO DE JUEGO-->
+            <img src="IMG/Metiorito.png" width="70px" class="Meteiorito" id="Meteiorito">
+            <img src="IMG/Metiorito.png" width="70px" class="Meteiorito" id="Meteiorito2">
+            <img src="IMG/planeta_tierra.png" width="400px" class="Planeta">
+            <!--Limite dentro del tablero del juego-->
+            <div class="Limite"></div>
+    
+            <!--ELEMENTOS DE START---------------------------------------------------------->
+    
+            <!--Pantalla principal al ingresar al juego START-->
+            <div class="Start" id="Start">
+            <div class="Contenedor_Mensaje_Star" id="Contenedor_Mensaje_Star">
+            <h1 class="Texo" id="Texo">¿LISTO PARA SALVAR<br> EL MUNDO? -> LVL: 1</h1> <!--Titulo de la seccion start-->
+            
+
+            <div style="display: flex; justify-content: center; position: absolute; width: 100%;">
+            <img src="IMG/Pez_Globo.gif" width="18%" id="chems1">
+            <h1 class="Pollo">Dificultad: Pez globo</h1>
+            <img src="IMG/Pez_Globo.gif" width="18%" id="chems2">
+            </div>
+
+            <br> <div class=Play id="Play">JUGAR</div><!--Boton de jugar-->
+            </div>
+            <div id="Contenedor_contador"><span id="RGB"></span></div><!--Span que contiene el conteo-->
+            </div>
+    
+            <!--PANTALLA AL PRECIONAR PAUSE---------------------------------------------->
+            <div class="Pausa_Pantalla" id="Pausa_Pantalla">
+            <h1 class="Mensaje_Pause">EL JUEGO ESTA<br> EN PAUSE</h1><!--Mensaje del juego al estar en pausa-->
+            </div>
+    
+                <!--CONTENEDOR DE AL GANAR EL JUEGO-->
+
+    <div class="GANASTE_PANTALLA" id="GANASTE_PANTALLA">
+
+      <h1>LOGRO DESBLOQUEADO: DESTRUCTOR <br> DE ASTEROIDES</h1>
+      <h3> FUE REALMENTE SORPRENDENTE COMO DEFENDISTE LA TIERRA;
+      ESPEREMOS QUE SIGAS ASI, AHORA, QUE ESPERAS? VE POR EL SIGUIENTE NIVEL</h3>
+
+      <div class="NEXT" id="NEXT" onclick="IrNivel2()">
+        <h2>SIGUIENTE NIVEL&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></h2>
+      </div>
+
+    </div>
+    
+            </div><!--FIN DEL JUEGO-->
+        </div>
+
+
+
+<section id="NIVEL_02"><!--SEGUNDO LVL------------------------------------------------------------------------>
+
+
+        <!--Contenedor-Cabezera-->
+        <div class="Cabezeralvl2">
+            <div class="Tiempolvl2"><h3>TIEMPO</h3><span id="Tiempolvl2">60</span></div><!--Tiempo con su span para la el final del minuto--> 
+            <div class="Puntajelvl2"><h3>PUNTAJE</h3><span id="Puntajelvl2">0 / 34</span></div><!--Puntaje con su span que indica el puntaje-->
+            <div class="Pauselvl2" id="Pauselvl2"><h3>PAUSE / REANUDA</h3></div><!--Boton de pause-->
+        
+            </div>
+    
+            <!--CCMIENZO DEL JUEGO------------------------------------------------------>
+    
+            <!--Contenedor general del juego-->
+            <div class="Contenedorlvl2"> 
+            <!--IMAGENES DEBTRO DE JUEGO-->
+            <img src="IMG/Metiorito.png" width="70px" class="Meteioritolvl2" id="Meteioritolvl2">
+            <img src="IMG/Metiorito.png" width="70px" class="Meteioritolvl2" id="Meteiorito2lvl2">
+            <img src="IMG/Metiorito.png" width="70px" class="Meteioritolvl2" id="Meteiorito3lvl2"> 
+            <img src="IMG/planeta_tierra.png" width="400px" class="Planetalvl2">
+            <!--Limite dentro del tablero del juego-->
+            <div class="Limitelvl2"></div>
+    
+            <!--ELEMENTOS DE START---------------------------------------------------------->
+    
+            <!--Pantalla principal al ingresar al juego START-->
+            <div class="Startlvl2" id="Startlvl2">
+            <h1 class="Texolvl2" id="Texolvl2">¿LISTO PARA SALVAR<br> EL MUNDO? -> LVL: 2 </h1>
+            <div id="Dificultad">
+                <img src="IMG/Tiburon.gif" width="18%">
+                <h1 style="font-size: 27px; font-family: 'Press Start 2P', cursive;">&nbsp;Dificultad : Tiburon&nbsp;</h1>
+                <img src="IMG/Tiburon.gif" width="18%">
+            </div>
+            <!--Titulo de la seccion start-->
+            <br> <div class=Playlvl2 id="Playlvl2">JUGAR</div><!--Boton de jugar-->
+            <div id="Contenedor_contadorlvl2"><span id="RGBlvl2"></span></div><!--Span que contiene el conteo-->
+            </div>
+    
+    
+            <!--PANTALLA AL PRECIONAR PAUSE---------------------------------------------->
+            <div class="Pausa_Pantallalvl2" id="Pausa_Pantallalvl2">
+            <h1 class="Mensaje_Pauselvl2">EL JUEGO ESTA<br> EN PAUSE</h1><!--Mensaje del juego al estar en pausa-->
+            </div>
+
+            <div class="GanastePantallaLvL2" id="GanastePantallaLvL2">
+
+                <h1>LOGRO DESBLOQUEADO:<br> AGILIDAD EXTREMA</h1>
+                <h3>AHORA ESTAS MÁS CERCA DE COMPLETAR ESTE JUEGO, ASÍ QUE PREPARATE PARA LO PEOR, RECUERDA QUE LOS 
+                    METEORITOS NO SON ALGO PARA TOMÁRSELO A LA LIGERA Y MÁS AUN EN EL SIGUIENTE NIVEL, EN DONDE LA DIFICULTAD
+                    AUMENTA EXPONENCIALMENTE 
+                </h3>
+                <div style="display: flex; width: auto;">
+                
+
+            
+            <script src="Ejecucion2.js"></script>
+        </div>
+    
+         </div><!--FIN DEL JUEGO-->
+    </section>
+
+        <!--TERCER NIVEL ----------------------------------------------------------------------------->
+        <section id="NIVEL3" >
+
+                <!--Contenedor-Cabezera-->
+                <div class="Cabezeralvl3">
+                    <!--Tiempo con su span para la el final del minuto-->
+                    <div class="Tiempolvl3"><h3>TIEMPO</h3><span id="Tiempolvl3">50</span></div>
+                    <!--Puntaje con su span que indica el puntaje-->
+                    <div class="Puntajelvl3">
+                        <h3>PUNTAJE</h3>
+                        <span id="Puntajelvl3">0 / 40</span>
+                    </div>
+                    <!--Boton de pause-->
+                    <div class="Pauselvl3" id="Pauselvl3">
+                        <h3>PAUSE / REANUDAR</h3>
+                    </div>
+                </div>
+        
+                <!--CCMIENZO DEL JUEGO------------------------------------------------------>
+        
+                <!--Contenedor general del juego-->
+                <div class="Contenedorlvl3">
+                    <!--IMAGENES DEBTRO DE JUEGO-->
+                    <img src="IMG/Metiorito.png" width="70px" class="Meteoritolvl3" id="Meteoritolvl3">
+                    <img src="IMG/Metiorito.png" width="70px" class="Meteoritolvl3" id="Meteorito2lvl3">
+                    <img src="IMG/Metiorito.png" width="70px" class="Meteoritolvl3" id="Meteorito3lvl3">
+                    <img src="IMG/Metiorito.png" width="70px" class="Meteoritolvl3" id="Meteorito4lvl3">
+                    <img src="IMG/planeta_tierra.png" width="400px" class="Planetalvl3">
+        
+                    <!--Limite dentro del tablero del juego-->
+                    <div class="Limitelvl3"></div>
+        
+                    <!--ELEMENTOS DE START---------------------------------------------------------->
+        
+                    <!--Pantalla principal al ingresar al juego START-->
+                    <div class="Startlvl3" id="Startlvl3">
+                        <!--Titulo de la seccion start-->
+                        <h1 class="Textolvl3" id="Textolvl3">¿LISTO PARA SALVAR<br> EL MUNDO? -> LVL: 3</h1> <br>
+                        <!--Boton de jugar-->
+                        <div class=Playlvl3 id="Playlvl3">JUGAR</div>
+                        <!--Dificultad-->
+                        <div class="Dificultadlvl3" id="Dificultadlvl3">
+                        <img src="IMG/Megalodon.gif" width="16%">
+                        &nbsp;<h1 style="font-size: 27px; font-family: 'Press Start 2P', cursive;">
+                        Dificultad: Megalodon</h1>&nbsp;
+                        <img src="IMG/Megalodon.gif" width="16%">
+                        </div>
+                        <!--Span que contiene el conteo-->
+                        <div id="Contenedor_contadorlvl3"><span id="RGBlvl3"></span></div>
+                    </div>
+        
+                    <!--Pantalla de sorpresa-->
+                    
+                    <div class="Pantalla_navelvl3" id="Pantalla_Ovnislvl3">
+                        <img src="IMG/nave.gif" class="Ovnislvl3" id="Navelvl3">
+                        <img src="IMG/nave.gif" class="Ovnislvl3" id="Nave2lvl3">
+                    </div>
+                    <div class="Pantalla_Nodrizalvl3" id="Pantalla_Nodrizalvl3">
+                        <img src="IMG/nodriza.gif" class="Ovnislvl3" id="Nodrizalvl3">
+                    </div>
+                    <div class="Pantalla_nave2lvl3" id="Pantalla_Ovnis2lvl3">
+                        <img src="IMG/nave.gif" class="Ovnislvl3" id="Nave3lvl3">
+                        <img src="IMG/nave.gif" class="Ovnislvl3" id="Nave4lvl3">
+                    </div>
+        
+                    <!--Pantalla de créditos-->
+                    <div id="Pantalla_creditoslvl3"></div>
+                    <div id="Creditoslvl3">
+                        <h3>Desarrollado por:</h3><br>
+                        <p>Fredy Palomino</p>
+                        <p>David Chambilla</p>
+                        <p>Renzo Blas</p>
+                        <p>Brandon Montiveros</p>
+                    </div>
+                    <div id="Proximolvl3">
+                        <h4>Próximamente:</h4>
+                        <h4>Iron Fist 2</h4>
+                    </div>
+        
+                    <!--PANTALLA AL PRESIONAR PAUSE---------------------------------------------->
+                    <div class="Pausa_Pantallalvl3" id="Pausa_Pantallalvl3">
+                        <!--Mensaje del juego al estar en pausa-->
+                        <h1 class="Mensaje_Pauselvl3">EL JUEGO ESTA<br>EN PAUSE</h1>
+                    </div>
+                </div>
+                <script src="Ejecucion3.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                
+<!--llamado al script js-->
+<script src="JavaScript.js"></script>
+
+
+</body>
+</html>
